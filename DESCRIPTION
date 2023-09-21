@@ -2,9 +2,9 @@ Package: tidyagronomy
 Title: Agornomy In The tidyverse!
 Version: 0.0.0.9000
 Authors@R: 
-    person("James", "Horine", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("James", "Horine", , "jamespatrickhorine@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7671-5358"))
+Description: R Package for the tidy handling of common agronomic .
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
@@ -14,4 +14,5 @@ Imports:
     dplyr (>= 1.1.3),
     tidyr (>= 1.3.0),
     timetk (>= 2.8.3),
-    tidync (>= 0.3.0)
+    tidync (>= 0.3.0),
+    lubridate
