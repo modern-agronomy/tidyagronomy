@@ -3,11 +3,34 @@
 \name{growing_degree_unit}
 \alias{growing_degree_unit}
 \title{Growing Degree & Stress Calculations
-References: https://products.climate.ncsu.edu/ag/corn/about/}
+References: https://products.climate.ncsu.edu/ag/corn/about/
+Calculate Daily Growing Degree Units (GDU)}
 \usage{
-growing_degree_unit(value, baseline, upper_bound = NULL)
+growing_degree_unit(temp, baseline = 10, upper_bound = 30)
+}
+\arguments{
+\item{temp}{A numeric vector of daily mean temperatures (in degrees Celsius).}
+
+\item{baseline}{A numeric value for the lower threshold (default is 10°C).}
+
+\item{upper_bound}{A numeric value for the upper cap (default is 30°C).}
+}
+\value{
+A numeric vector of daily GDU values.
 }
 \description{
-Growing Degree & Stress Calculations
-References: https://products.climate.ncsu.edu/ag/corn/about/
+Computes the daily Growing Degree Unit (GDU) based on the daily mean temperature.
+The function subtracts a baseline temperature from the daily temperature, while capping
+the effective temperature at an upper bound. If the daily temperature does not exceed the baseline,
+GDU is zero.
+}
+\details{
+The formula used is:
+\deqn{GDU = \max(\min(temp, \; upper\_bound) - baseline, \; 0)}
+}
+\examples{
+# For a vector of daily temperatures
+temps <- c(8, 12, 25, 35)
+growing_degree_unit(temps)
+
 }
