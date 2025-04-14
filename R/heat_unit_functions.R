@@ -92,7 +92,7 @@ chilling_degree_unit <- function(temp, chilling_threshold = 7) {
   return(cdu)
 }
 
-
+#' will clean this up later.
 
 #' #' @export
 #' growing_degree_unit <- NULL
